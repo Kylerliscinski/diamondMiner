@@ -1,0 +1,33 @@
+body {
+  background-color: wheat;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+img {
+  width: 35dvh;
+  cursor: pointer;
+}
+
+.empty-container {
+  height: 100px;
+}
+
+.empty-container-2 {
+  height: 80px;
+}
+
+.empty-container-3 {
+  height: 50px;
+}
+
+.main-hub {
+  height: 345px;
+  background-color: lightgrey;
+}
+
+.upgrades-stats {
+  background-color: darkgray;
+}

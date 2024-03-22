@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Miner</title>
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
+    defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="debug">
+
+  <!-- //!SECTION Empty Space -->
+  <div class="container-fluid empty-container"></div>
+
+  <!-- //!SECTION Title -->
+  <header class="d-flex justify-content-center">
+    <span class="title">Diamond Miner</span>
+  </header>
+
+  <!-- //!SECTION Main Clickable Object -->
+  <main>
+    <!-- //!SECTION Empty Space -->
+    <div class="container-fluid empty-container-2"></div>
+
+    <!-- //!SECTION Main Mine Image -->
+    <div class="d-flex justify-content-center">
+      <img onclick="mineBlock(1)"
+        src="https://img1.yeggi.com/page_images_cache/4010022_minecraft-diamond-ore-3d-printable-design-to-download-"
+        alt="Diamond Block">
+    </div>
+
+    <!-- //!SECTION Empty Space -->
+    <div class="container-fluid empty-container-3"></div>
+  </main>
+
+  <!-- //!SECTION Main Hub -->
+  <footer class="container-fluid main-hub p-0">
+
+    <!-- //!SECTION Stats bar -->
+    <section class="container">
+      <div class="row justify-content-center">
+        <div id="increase-pickaxe" class="col-2 bg-dark text-white rounded">
+          00<span><i class="mdi mdi-gesture-tap"></i></span>
+        </div>
+        <div id="diamond-count" class="col-3 bg-dark text-white rounded">0</div>
+        <div class="col-2 bg-dark text-white rounded">
+          <p>00</p><span><i class="mdi mdi-timer-outline"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- //!SECTION Upgrades & Stats Bar -->
+    <section class="container-fluid">
+
+      <section class="row upgrades-stats">
+
+        <!-- //!SECTION Upgrade Section -->
+        <section class="col-6">
+          <div class="container">
+            <div class="row justify-content-center border border-dark">
+              <div class="col-4">Click Upgrades
+                <div>
+                  <button onclick="buyDiamondPickaxe(1)">10 <i
+                      class="mdi mdi-diamond-outline"></i></button><span>Diamond
+                    Pickaxe +1</span>
+                </div>
+                <div>
+                  <button>25 <i class="mdi mdi-diamond-outline"></i></button><span>Netherite Pickaxe +5</span>
+                </div>
+              </div>
+              <div class="col-4">Automatic Upgrades
+                <div>
+                  <button>25 <i class="mdi mdi-diamond-outline"></i></button><span>Villager +10 / 3s</span>
+                </div>
+                <div>
+                  <button>30 <i class="mdi mdi-diamond-outline"></i></button><span>Iron Golem +100 / 3s</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- //!SECTION Stats Section -->
+        <section class="col-6">
+          <div class="container">
+            <div class="row justify-content-center border border-dark">
+              <div class="col-4">Click Stats
+                <div>
+                  <button>00</button><span>Diamond Pickaxe <i
+                      class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
+                </div>
+                <div>
+                  <button>00</button><span>Netherite Pickaxe <i
+                      class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
+                </div>
+              </div>
+              <div class="col-4">Automatic Stats
+                <div>
+                  <button>00</button><span>Villager <i class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
+                </div>
+                <div>
+                  <button>00</button><span>Iron Golem <i
+                      class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
+      </section>
+    </section>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
