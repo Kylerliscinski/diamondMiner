@@ -8,8 +8,8 @@
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
     integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
-  <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
-    defer></script>
+  <!-- <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
+    defer></script> -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,7 +30,7 @@
 
     <!-- //!SECTION Main Mine Image -->
     <div class="d-flex justify-content-center">
-      <img onclick="mineBlock(1)"
+      <img onclick="mineBlock()"
         src="https://img1.yeggi.com/page_images_cache/4010022_minecraft-diamond-ore-3d-printable-design-to-download-"
         alt="Diamond Block">
     </div>
@@ -45,11 +45,11 @@
     <!-- //!SECTION Stats bar -->
     <section class="container">
       <div class="row justify-content-center">
-        <div id="increase-pickaxe" class="col-2 bg-dark text-white rounded">
+        <div id="increase-tools" class="col-2 bg-dark text-white rounded">
           00<span><i class="mdi mdi-gesture-tap"></i></span>
         </div>
         <div id="diamond-count" class="col-3 bg-dark text-white rounded">0</div>
-        <div class="col-2 bg-dark text-white rounded">
+        <div id="increase-auto" class="col-2 bg-dark text-white rounded">
           <p>00</p><span><i class="mdi mdi-timer-outline"></i></span>
         </div>
       </div>
@@ -66,20 +66,23 @@
             <div class="row justify-content-center border border-dark">
               <div class="col-4">Click Upgrades
                 <div>
-                  <button onclick="buyDiamondPickaxe(1)">10 <i
+                  <button onclick="buyDiamondPickaxe('diamond pickaxe')">10 <i
                       class="mdi mdi-diamond-outline"></i></button><span>Diamond
                     Pickaxe +1</span>
                 </div>
                 <div>
-                  <button>25 <i class="mdi mdi-diamond-outline"></i></button><span>Netherite Pickaxe +5</span>
+                  <button onclick="buyNetheritePickaxe('netherite pickaxe')">25 <i
+                      class="mdi mdi-diamond-outline"></i></button><span>Netherite Pickaxe +5</span>
                 </div>
               </div>
               <div class="col-4">Automatic Upgrades
                 <div>
-                  <button>25 <i class="mdi mdi-diamond-outline"></i></button><span>Villager +10 / 3s</span>
+                  <button onclick="buyVillager('villager')">25 <i
+                      class="mdi mdi-diamond-outline"></i></button><span>Villager +10 / 3s</span>
                 </div>
                 <div>
-                  <button>30 <i class="mdi mdi-diamond-outline"></i></button><span>Iron Golem +100 / 3s</span>
+                  <button onclick="buyIronGolem('iron golem')">30 <i
+                      class="mdi mdi-diamond-outline"></i></button><span>Iron Golem +100 / 3s</span>
                 </div>
               </div>
             </div>
@@ -88,24 +91,25 @@
 
         <!-- //!SECTION Stats Section -->
         <section class="col-6">
-          <div class="container">
+          <div class="container-flu">
             <div class="row justify-content-center border border-dark">
               <div class="col-4">Click Stats
                 <div>
-                  <button>00</button><span>Diamond Pickaxe <i
+                  <button id="add-to-stock">00</button><span>Diamond Pickaxe <i
                       class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
                 </div>
                 <div>
-                  <button>00</button><span>Netherite Pickaxe <i
+                  <button id="add-to-stock-2">00</button><span>Netherite Pickaxe <i
                       class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
                 </div>
               </div>
               <div class="col-4">Automatic Stats
                 <div>
-                  <button>00</button><span>Villager <i class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
+                  <button id="add-to-stock-3">00</button><span>Villager <i
+                      class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
                 </div>
                 <div>
-                  <button>00</button><span>Iron Golem <i
+                  <button id="add-to-stock-4">00</button><span>Iron Golem <i
                       class="mdi mdi-arrow-expand-right"></i></span><button>00</button>
                 </div>
               </div>
