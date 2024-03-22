@@ -74,7 +74,6 @@ function buyUpgrade(boughtUpgrade, upgradeThroughArray) {
 function increasePrices(newUpgrade, upgradeThroughArray) {
   let increasingCost = upgradeThroughArray.find(u => u.name == `${newUpgrade}`)
   increasingCost.price += increasingCost.quantity
-  console.log(increasingCost.name, 'increased to', increasingCost.price)
   drawPrices(newUpgrade, upgradeThroughArray)
 }
 
