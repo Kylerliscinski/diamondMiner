@@ -43,12 +43,12 @@ function mineBlock() {
 
 function drawDiamonds() {
   const diamondElem = document.getElementById('diamond-count')
-  diamondElem.innerText = `${diamonds}`
+  diamondElem.innerText = `Current Gold: <span id="clicker" class="mdi mdi-diamond-stone"></span> ${diamonds}`
 }
 
 function drawTotalDiamondsCollected() {
   let totalDiamondsCollectElm = document.getElementById('total-diamonds-collected')
-  totalDiamondsCollectElm.innerHTML = `${totalDiamondsCollected}`
+  totalDiamondsCollectElm.innerHTML = `<span class="fs-3">Lifetime Collected:</span> <span id="clicker" class="mdi mdi-diamond-stone"></span> ${totalDiamondsCollected}`
 }
 
 function buyUpgrade(boughtUpgrade, upgradeThroughArray) {
@@ -84,16 +84,16 @@ function drawPrices(newUpgrade, upgradeThroughArray) {
   let villagerPriceElem = document.getElementById("villager")
   let ironGolemPriceElem = document.getElementById("iron golem")
   switch (increasingCost.name) {
-    case 'diamond pickaxe':
+    case 'diamondPickaxePrice':
       diamondPickaxePriceElem.innerText = increasingCost.price
       break
-    case 'netherite pickaxe':
+    case 'netheritePickaxePrice':
       netheritePickaxePriceElem.innerText = increasingCost.price
       break
-    case 'villager':
+    case 'villagerPrice':
       villagerPriceElem.innerText = increasingCost.price
       break
-    case 'iron golem':
+    case 'ironGolemPrice':
       ironGolemPriceElem.innerText = increasingCost.price
       break
   }
