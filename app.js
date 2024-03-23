@@ -1,6 +1,5 @@
 let diamonds = 0
 
-
 let clickUpgrades = [
   {
     name: 'diamond pickaxe',
@@ -51,8 +50,8 @@ function drawTotalDiamondsCollected() {
   totalDiamondsCollectElm.innerHTML = `<span class="fs-3">Total Collected:</span> <span id="clicker" class="mdi mdi-diamond-stone"></span> ${totalDiamondsCollected}`
 }
 
-function buyUpgrade(boughtUpgrade, upgradeThroughArray) {
-  let newUpgrades = upgradeThroughArray.find(u => u.name == `${boughtUpgrade}`)
+function buyUpgrade(newUpgrade, upgradeThroughArray) {
+  let newUpgrades = upgradeThroughArray.find(u => u.name == `${newUpgrade}`)
   if (diamonds >= newUpgrades.price) {
     newUpgrades.quantity += 1
     if (upgradeThroughArray == clickUpgrades) {
@@ -62,7 +61,7 @@ function buyUpgrade(boughtUpgrade, upgradeThroughArray) {
       intervalMineBlock += newUpgrades.multiplier
     }
     diamonds -= newUpgrades.price
-    increasePrices(boughtUpgrade, upgradeThroughArray)
+    increasePrices(newUpgrade, upgradeThroughArray)
   } else {
     window.alert("You don't have enough gold!")
   }
@@ -131,6 +130,10 @@ function drawPlayerUpgrades() {
     }
   })
 }
+
+// function drawStats() {
+//   if()
+// }
 
 let interval = setInterval(villagerMining, 3000)
 function villagerMining() {

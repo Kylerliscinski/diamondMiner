@@ -16,19 +16,17 @@
 <body class="container-fluid text-light">
   <header class="row justify-content-between fs-1">
     <span class="col-5 align-items-center">Mine The Diamond Block!</span>
-    <i class="mdi mdi-pickaxe col-2 text-end"></i>
     <span id="total-diamonds-collected" class="col-5 text-end"></span>
   </header>
 
   <main class="row justify-content-around text-center">
 
-    <!-- SECTION Clicker -->
+
     <section class="col-4 mt-4 mb-2 disable-dbl-tap-zoom">
       <span id="clicker" class="clicker px-5" onclick="mineBlock()" title="You Gotta Mine Fast!"><img
           src="https://art.pixilart.com/73c4f7031744129.png" alt="" class="mb-5"> </span>
     </section>
 
-    <!-- SECTION - HUD -->
     <section class="col-10 ">
       <div class="row justify-content-around hud">
         <p id="per-click" class="col-11 col-md-2 order-2 order-md-1 hud m-1 fs-4">Collected Per Click</p>
@@ -37,52 +35,56 @@
       </div>
     </section>
 
-
-    <!-- SECTION - Upgrade and Stats Container -->
     <section class="text-center hud col-11 m-1">
       <div class="row justify-content-around">
 
-        <!-- SECTION Upgrades -->
         <section class="col-11 col-md-5">
           <section class="row hud justify-content-around m-1">
-            <div class="col-11 col-md-5 " id="click-upgrades">
+            <div class="col-11 col-md-5" id="click-upgrades">
               <div class="row p-1">
                 <span>On-Click Upgrades</span>
-                <button class="button hud m-1" onclick="buyUpgrade('diamond pickaxe', clickUpgrades)">Buy
-                  <span class="mdi mdi-pickaxe"></span>
-                  <span id="diamondPickaxePrice"> 1</span>
-                </button>
-                <button class="button hud m-1" onclick="buyUpgrade('netherite pickaxe', clickUpgrades)">Buy
-                  <span class="mdi mdi-pickaxe"></span>
-                  <span id="netheritePickaxePrice"> 2</span>
-                </button>
-                <span>
-                  <p id="current-diamond-pickaxe-upgrades" class="mdi mdi-pickaxe"> 0</p>
-                  <p id="current-netherite-pickaxe-upgrades" class="mdi mdi-pickaxe"> 0</p>
-                </span>
+                <div class="col-6">
+                  <button class="button hud m-1" onclick="buyUpgrade('diamond pickaxe', clickUpgrades)">Buy
+                    <span class="mdi mdi-pickaxe"></span>
+                    <span id="diamondPickaxePrice"> 10</span>
+                  </button>
+                  <button class="button hud m-1" onclick="buyUpgrade('netherite pickaxe', clickUpgrades)">Buy
+                    <span class="mdi mdi-pickaxe"></span>
+                    <span id="netheritePickaxePrice"> 25</span>
+                  </button>
+                </div>
+                <div class="col-6">
+                  <span>
+                    <p id="current-diamond-pickaxe-upgrades" class="mdi mdi-pickaxe py-3"> 0</p>
+                    <p id="current-netherite-pickaxe-upgrades" class="mdi mdi-pickaxe py-3"> 0</p>
+                  </span>
+                </div>
               </div>
             </div>
             <div class="col-11 col-md-5" id="auto-upgrades">
               <div class="row p-1">
                 <span>Automatic Upgrades</span>
-                <button class="button hud m-1" onclick="buyUpgrade('villager', automaticUpgrades)">Buy
-                  <span class="mdi mdi-account"></span>
-                  <span id="villagerPrice"> 6</span>
-                </button>
-                <button class="button hud m-1" onclick="buyUpgrade('iron golem', automaticUpgrades)">Buy
-                  <span class="mdi mdi-account-box"></span>
-                  <span id="ironGolemPrice"> 12</span>
-                </button>
-                <span>
-                  <p id="current-villager-upgrades" class="mdi mdi-account"> 0</p>
-                  <p id="current-iron-golem-upgrades" class="mdi mdi-account-box"> 0</p>
-                </span>
+                <div class="col-6">
+                  <button class="button hud m-1" onclick="buyUpgrade('villager', automaticUpgrades)">Buy
+                    <span class="mdi mdi-account"></span>
+                    <span id="villagerPrice"> 6</span>
+                  </button>
+                  <button class="button hud m-1" onclick="buyUpgrade('iron golem', automaticUpgrades)">Buy
+                    <span class="mdi mdi-account-box"></span>
+                    <span id="ironGolemPrice">12</span>
+                  </button>
+                </div>
+                <div class="col-6">
+                  <span>
+                    <p id="current-villager-upgrades" class="mdi mdi-account py-3"> 0</p>
+                    <p id="current-iron-golem-upgrades" class="mdi mdi-account-box py-3"> 0</p>
+                  </span>
+                </div>
               </div>
             </div>
           </section>
         </section>
 
-        <!-- SECTION Statistics -->
         <section class="col-11 col-md-5">
           <section class="row hud justify-content-around m-1">
             <div class="col-11 col-md-5" id="click-stats">
