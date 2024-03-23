@@ -1,33 +1,53 @@
-body {
-  background-color: wheat;
+:root {
+  --main: #131317;
+  --light: #dadae6;
+  --hd-color: #2f4f4f;
+
 }
 
-.title {
-  font-size: xx-large;
+header {
+  background-color: var(--hd-color);
+  font-size: 50px;
+  opacity: 90%;
+}
+
+body {
+  background-color: black;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1fa0f80-33c1-4516-8baa-90fb67ed2269/d8edwxz-253b95e0-ecff-44d3-9b35-db35df195781.jpg/v1/fill/w_1024,h_576,q_75,strp/minecraft__moss_stone_brick_textured_wallpaper_by_elbarnzo_d8edwxz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvZDFmYTBmODAtMzNjMS00NTE2LThiYWEtOTBmYjY3ZWQyMjY5XC9kOGVkd3h6LTI1M2I5NWUwLWVjZmYtNDRkMy05YjM1LWRiMzVkZjE5NTc4MS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Wk9vj3i_ja-0kP7eN7YZMianuf6kTAPqlEN-xRTmhoU);
+  object-fit: cover;
+  object-position: 25% 25%;
+  color: var(--light);
 }
 
 img {
-  width: 35dvh;
+  width: 50dvh;
+}
+
+.clicker {
   cursor: pointer;
+  box-shadow: #020202;
 }
 
-.empty-container {
-  height: 100px;
+.hud {
+  background-color: rgb(85, 67, 29);
+  border: 5px;
+  border-radius: 10px;
+  border-color: var(--light);
+  border-style: inset;
+  opacity: 90%;
 }
 
-.empty-container-2 {
-  height: 80px;
+.button {
+  cursor: pointer;
+  color: var(--light);
 }
 
-.empty-container-3 {
-  height: 50px;
+.button:hover {
+  border-color: var(--hd-color);
+  border-style: outset;
+  background-color: var(--main);
 }
 
-.main-hub {
-  height: 345px;
-  background-color: lightgrey;
-}
-
-.upgrades-stats {
-  background-color: darkgray;
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
 }

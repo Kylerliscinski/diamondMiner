@@ -43,12 +43,12 @@ function mineBlock() {
 
 function drawDiamonds() {
   const diamondElem = document.getElementById('diamond-count')
-  diamondElem.innerText = `Current Gold: <span id="clicker" class="mdi mdi-diamond-stone"></span> ${diamonds}`
+  diamondElem.innerText = `Current Diamonds: ${diamonds}`
 }
 
 function drawTotalDiamondsCollected() {
   let totalDiamondsCollectElm = document.getElementById('total-diamonds-collected')
-  totalDiamondsCollectElm.innerHTML = `<span class="fs-3">Lifetime Collected:</span> <span id="clicker" class="mdi mdi-diamond-stone"></span> ${totalDiamondsCollected}`
+  totalDiamondsCollectElm.innerHTML = `<span class="fs-3">Total Collected:</span> <span id="clicker" class="mdi mdi-diamond-stone"></span> ${totalDiamondsCollected}`
 }
 
 function buyUpgrade(boughtUpgrade, upgradeThroughArray) {
@@ -100,11 +100,11 @@ function drawPrices(newUpgrade, upgradeThroughArray) {
 }
 
 function drawMineBlock() {
-  let perClick = document.getElementById('per-click')
-  let intervalClick = document.getElementById('interval-click')
+  let perclick = document.getElementById('per-click')
+  let intervalclick = document.getElementById('interval-click')
 
-  perClick.innerHTML = `${perClick.toString()}`
-  intervalClick.innerHTML = `${intervalClick.toString()}`
+  perclick.innerHTML = `<span class="mdi mdi-cursor-pointer"></span> ${perClick}`
+  intervalclick.innerHTML = `<span class="mdi mdi-account"></span> ${interval}`
 }
 
 function drawPlayerUpgrades() {
