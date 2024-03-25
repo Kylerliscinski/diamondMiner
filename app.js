@@ -24,7 +24,7 @@ let automaticUpgrades = [
   },
   {
     name: 'iron golem',
-    price: 30,
+    price: 100,
     quantity: 0,
     multiplier: 50
   }
@@ -80,7 +80,7 @@ function drawPrices(newUpgrade, upgradeThroughArray) {
   let increasingCost = upgradeThroughArray.find(upgrade => upgrade.name == `${newUpgrade}`)
   let diamondPickaxePriceElem = document.getElementById("diamond pickaxe")
   let netheritePickaxePriceElem = document.getElementById("netherite pickaxe")
-  let villagerPriceElem = document.getElementById("villager")
+  let villagerPriceElem = document.getElementById("villagerPrice")
   let ironGolemPriceElem = document.getElementById("iron golem")
   switch (increasingCost.name) {
     case 'diamondPickaxePrice':
@@ -130,10 +130,6 @@ function drawPlayerUpgrades() {
     }
   })
 }
-
-// function drawStats() {
-//   if()
-// }
 
 let interval = setInterval(villagerMining, 3000)
 function villagerMining() {
