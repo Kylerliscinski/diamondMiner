@@ -103,7 +103,7 @@ function drawMineBlock() {
   let intervalclick = document.getElementById('interval-click')
 
   perclick.innerHTML = `<span class="mdi mdi-cursor-pointer"></span> ${perClick}`
-  intervalclick.innerHTML = `<span class="mdi mdi-account"></span> ${interval}`
+  intervalclick.innerHTML = `<span class="mdi mdi-account"></span> ${intervalMineBlock}`
 }
 
 function drawPlayerUpgrades() {
@@ -131,10 +131,17 @@ function drawPlayerUpgrades() {
   })
 }
 
-let interval = setInterval(villagerMining, 3000)
+
+function updateBoughtItems() {
+  const diamondPickAxeElem = document.getElementById('diamondPickaxePrice')
+
+}
+
+
 function villagerMining() {
-  diamonds += interval
-  totalDiamondsCollected += interval
+  let intervalMineBlock = setInterval(villagerMining, 3000)
+  diamonds += intervalMineBlock
+  totalDiamondsCollected += intervalMineBlock
   drawDiamonds()
   drawTotalDiamondsCollected()
 }
@@ -143,3 +150,4 @@ drawTotalDiamondsCollected()
 drawDiamonds()
 drawMineBlock()
 drawPlayerUpgrades()
+updateBoughtItems()
